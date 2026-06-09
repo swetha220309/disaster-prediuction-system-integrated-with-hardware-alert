@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disaster Risk Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>🌍 Disaster Risk Predictor</h2>
+
+    <div class="card">
+        <form method="POST">
+            <label>Latitude</label>
+            <input type="number" step="any" name="latitude" required>
+
+            <label>Longitude</label>
+            <input type="number" step="any" name="longitude" required>
+
+            <label>Date</label>
+            <input type="date" name="date" required>
+
+            <label>Magnitude</label>
+            <input type="number" step="any" name="magnitude" value="6.5">
+
+            <label>Duration (hours)</label>
+            <input type="number" step="any" name="duration" value="48">
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+    {% if result %}
+    <div class="card">
+        <h3>📊 Result</h3>
+
+        <table class="result-table">
+            <tr>
+                <td><b>Disaster</b></td>
+                <td>{{ result.disaster }}</td>
+            </tr>
+            <tr>
+                <td><b>Country</b></td>
+                <td>{{ result.country }}</td>
+            </tr>
+            <tr>
+                <td><b>Alert Level</b></td>
+                <td class="alert-{{ result.alert }}">
+                    {{ result.alert }}
+                </td>
+            </tr>
+            {% if result.confidence %}
+            <tr>
+                <td><b>Confidence</b></td>
+                <td>{{ result.confidence }}</td>
+            </tr>
+            {% endif %}
+        </table>
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

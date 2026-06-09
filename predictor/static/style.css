@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    padding: 30px;
+}
+
+/* Center container */
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Card style */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Form */
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input, button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+}
+
+button {
+    margin-top: 20px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Result table */
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.result-table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+}
+
+/* Alert colors */
+.alert-GREEN {
+    color: #198754;
+    font-weight: bold;
+}
+
+.alert-ORANGE {
+    color: #fd7e14;
+    font-weight: bold;
+}
+
+.alert-RED {
+    color: #dc3545;
+    font-weight: bold;
+}
